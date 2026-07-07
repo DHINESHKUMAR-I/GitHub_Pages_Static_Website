@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub Pages Static Website</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(-45deg,#6a11cb,#2575fc,#00c9a7,#f7971e);
+    background-size:400% 400%;
+    animation:bgAnimation 12s ease infinite;
+    color:white;
+}
+
+@keyframes bgAnimation{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:rgba(0,0,0,.25);
+    backdrop-filter:blur(10px);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition:.3s;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+.hero{
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    width:70%;
+    font-size:20px;
+    line-height:1.8;
+}
+
+.btn{
+    margin-top:35px;
+    padding:15px 35px;
+    border:none;
+    border-radius:40px;
+    background:white;
+    color:#2575fc;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+    background:yellow;
+}
+
+section{
+    padding:80px 10%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(12px);
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    background:rgba(255,255,255,.25);
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+.tech{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.tech div{
+    background:white;
+    color:#2575fc;
+    padding:15px 25px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.4s;
+}
+
+.tech div:hover{
+    background:yellow;
+    transform:scale(1.1);
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:15px;
+    font-size:20px;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:rgba(0,0,0,.25);
+    margin-top:40px;
+}
+
+.fade{
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+}
+
+nav{
+    margin-top:15px;
+}
+
+nav a{
+    display:inline-block;
+    margin:10px;
+}
+
+.hero h1{
+    font-size:38px;
+}
+
+.hero p{
+    width:95%;
+    font-size:18px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">🌐 GitHub Pages</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#features">Features</a>
+<a href="#technology">Technology</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero" id="home">
+
+<h1 id="typing"></h1>
+
+<p>
+Welcome to my colorful static website created using HTML, CSS, and JavaScript.
+This project demonstrates how to deploy a responsive website using GitHub Pages
+as part of DevOps Internship Task 6.
+</p>
+
+<button class="btn" onclick="scrollToAbout()">
+Explore Website
+</button>
+
+</section>
+
+<section id="about" class="fade">
+
+<h2 class="title">About GitHub Pages</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Free Hosting</h3>
+<p>
+GitHub Pages allows you to host static websites directly from your GitHub repository without any cost.
+</p>
+</div>
+
+<div class="card">
+<h3>Easy Deployment</h3>
+<p>
+Push your project to GitHub, enable GitHub Pages, and your website becomes live in minutes.
+</p>
+</div>
+
+<div class="card">
+<h3>Responsive Design</h3>
+<p>
+Static websites created with HTML, CSS, and JavaScript work perfectly across desktop and mobile devices.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="features" class="fade">
+
+<h2 class="title">Website Features</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Animated Background</h3>
+<p>Beautiful gradient animation using pure CSS.</p>
+</div>
+
+<div class="card">
+<h3>Glassmorphism UI</h3>
+<p>Modern transparent cards with blur effects.</p>
+</div>
+
+<div class="card">
+<h3>Single HTML File</h3>
+<p>Entire website built using one HTML file.</p>
+</div>
+
+<div class="card">
+<h3>Smooth Navigation</h3>
+<p>Easy scrolling between sections.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="technology" class="fade">
+
+<h2 class="title">Technologies Used</h2>
+
+<div class="tech">
+
+<div>HTML5</div>
+<div>CSS3</div>
+<div>JavaScript</div>
+<div>GitHub Pages</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact fade">
+
+<h2 class="title">Contact</h2>
+
+<p><strong>Name:</strong> DHINESHKUMAR</p>
+
+<p><strong>Project:</strong> DevOps Internship Task 6</p>
+
+<p><strong>Deployment:</strong> GitHub Pages</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 DHINESHKUMAR | DevOps Internship Task 6 | GitHub Pages</p>
+
+</footer>
+
+<script>
+
+const text="Welcome to My GitHub Pages Website";
+let i=0;
+
+function type(){
+
+if(i<text.length){
+
+document.getElementById("typing").innerHTML+=text.charAt(i);
+
+i++;
+
+setTimeout(type,80);
+
+}
+
+}
+
+type();
+
+function scrollToAbout(){
+
+document.getElementById("about").scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+});
+
+document.querySelectorAll(".fade").forEach(el=>observer.observe(el));
+
+</script>
+
+</body>
+</html>
